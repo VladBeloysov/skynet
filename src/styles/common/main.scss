@@ -1,4 +1,84 @@
-$bg: #00ffff;
 body {
-    background-color: $bg;
+    background-color: $colorGrayLight;
+}
+
+.content {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: $colorWhite;
+    border-top: 1px solid $colorGrayDark;
+    border-bottom: 1px solid $colorGrayDark;
+    margin-bottom: 40px;
+    padding-left: 30px;
+
+    &__title {
+        font-size: 26px;
+        line-height: 26px;
+        padding: 15px 0;
+        color: $colorGreen;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        border-bottom: 1px solid $colorGrayDark;
+        font-weight: 600;
+    }
+
+    &__speed {
+        display: inline-block;
+        padding-left: 30px;
+        padding-right: 20px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 26px;
+        color: $colorWhite;
+        font-weight: bold;
+        margin-left: -30px;
+        margin-bottom: 20px;
+
+        &.card__speed--brown {
+            background-color: $colorBrown;
+        }
+
+        &.card__speed--blue {
+            background-color: $colorBlue;
+        }
+
+        &.card__speed--red {
+            background-color: $colorRed;
+        }
+    }
+
+    &__content {
+        color: $colorTetxt;
+        padding-bottom: 15px;
+    }
+
+    &__price {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 22px;
+    }
+
+    &__footer {
+        padding: 15px 0;
+        border-top: 1px solid $colorGrayDark;
+    }
+
+    &__link {
+        color: $colorBlue;
+        text-transform: lowercase;
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
