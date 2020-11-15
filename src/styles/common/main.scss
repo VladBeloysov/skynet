@@ -18,7 +18,7 @@ body {
     &__title {
         font-size: 26px;
         line-height: 26px;
-        padding: 15px 0;
+        padding: 22px 0;
         color: $colorGreen;
         margin-bottom: 15px;
         text-transform: capitalize;
@@ -54,6 +54,24 @@ body {
     &__content {
         color: $colorTetxt;
         padding-bottom: 15px;
+        display: block;
+        position: relative;
+
+        &--next {
+            &:before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                right: 30px;
+                top: 50%;
+                margin-top: -7px;
+                width: 14px;
+                height: 14px;
+                border-top: 3px solid $colorGrayDark;
+                border-right: 3px solid $colorGrayDark;
+                transform: rotate(45deg);
+            }
+        }
     }
 
     &__price {
@@ -64,6 +82,10 @@ body {
 
     &__text {
         font-size: 22px;
+
+        &--gray {
+            color: $colorGrayDark2;
+        }
     }
 
     &__footer {
@@ -78,7 +100,52 @@ body {
         line-height: 35px;
     }
 
+    &__btn {
+        display: block;
+        width: calc(100% - 30px);
+        height: 80px;
+        line-height: 80px;
+        background-color: $colorGreen;
+        color: $colorWhite;
+        font-size: 26px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__wrap-text {
+        margin-top: 25px;
+    }
+
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.back {
+    display: block;
+    height: 85px;
+    line-height: 85px;
+    font-size: 30px;
+    font-weight: 600;
+    color: $colorBlack;
+    background-color: $colorWhite;
+    text-align: center;
+    border-bottom: 1px solid $colorGrayDark;
+    margin-bottom: 70px;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 21px;
+        top: 50%;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        border-top: 5px solid $colorGreen;
+        border-left: 5px solid $colorGreen;
+        transform: rotate(-45deg);
     }
 }

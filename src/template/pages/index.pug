@@ -3,13 +3,13 @@ html(lang="en")
     head
         meta(charset="utf-8")
         block title
-            title webpack Project
+            title Список тарифов
     body
         .content
             .card
                 .card__title
                     |тариф "земля"
-                .card__content
+                a(href="tariff.html").card__content.card__content--next
                     .card__speed.card__speed--brown
                         |50Мбит/с
                     .card__price
@@ -22,7 +22,7 @@ html(lang="en")
             .card
                 .card__title
                     |тариф "вода"
-                .card__content
+                a(href="tariff.html").card__content.card__content--next
                     .card__speed.card__speed--blue
                         |100Мбит/с
                     .card__price
@@ -35,7 +35,7 @@ html(lang="en")
             .card
                 .card__title
                     |тариф "огонь"
-                .card__content
+                a(href="tariff.html").card__content.card__content--next
                     .card__speed.card__speed--red 
                         |200Мбит/с
                     .card__price

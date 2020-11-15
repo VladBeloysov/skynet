@@ -1,4 +1,3 @@
-import html from "./template/pages/index.pug"
 // Import styles
 import style from "./styles/main.scss";
 // Import scripts

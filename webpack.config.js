@@ -55,7 +55,7 @@ module.exports = {
           }
         ]
       }
-    ]
+  ],
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -66,6 +66,14 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/template/pages/index.pug",
       filename: "./index.html"
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/template/pages/tariff.pug",
+      filename: "./tariff.html"
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/template/pages/details.pug",
+      filename: "./details.html"
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output

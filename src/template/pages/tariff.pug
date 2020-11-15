@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        block title
+            title Тариф
+    body
+        .content
+            a(href="index.html").back
+                |Тариф "Вода"
+            .card
+                .card__title
+                    |1 месяц
+                a(href="details.html").card__content.card__content--next
+                    .card__price
+                        |600 Р/мес
+                    p.card__text Разовый платеж - 600 Р
+            .card
+                .card__title
+                    |3 месяца
+                a(href="details.html").card__content.card__content--next
+                    .card__price
+                        |550 Р/мес
+                    p.card__text Разовый платеж - 1650 Р
+                    p.card__text Скидка - 150 Р
+            .card
+                .card__title
+                    |6 месяцев
+                a(href="details.html").card__content.card__content--next
+                    .card__price
+                        |510 Р/мес
+                    p.card__text Разовый платеж - 3060 Р
+                    p.card__text Скидка - 540 Р
+            .card
+                .card__title
+                    |12 месяцев
+                a(href="details.html").card__content.card__content--next
+                    .card__price
+                        |450 Р/мес
+                    p.card__text Разовый платеж - 5400 Р
+                    p.card__text Скидка - 1800 Р
