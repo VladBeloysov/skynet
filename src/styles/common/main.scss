@@ -4,16 +4,41 @@ body {
 
 .content {
     width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 0 auto;
+    }
 }
 
 .card {
+    width: 100%;
     background-color: $colorWhite;
     border-top: 1px solid $colorGrayDark;
     border-bottom: 1px solid $colorGrayDark;
     margin-bottom: 40px;
     padding-left: 30px;
+
+    @media (min-width: 640px) {
+        width: calc(50% - 50px);
+    }
+
+    @media (min-width: 1024px) {
+        width: calc(33.33% - 50px);
+    }
+
+    &--main {
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+    }
 
     &__title {
         font-size: 26px;
@@ -24,6 +49,7 @@ body {
         text-transform: capitalize;
         border-bottom: 1px solid $colorGrayDark;
         font-weight: 600;
+        padding-right: 20px;
     }
 
     &__speed {
@@ -56,6 +82,7 @@ body {
         padding-bottom: 15px;
         display: block;
         position: relative;
+        padding-right: 60px;
 
         &--next {
             &:before {
@@ -89,15 +116,16 @@ body {
     }
 
     &__footer {
-        padding: 15px 0;
+        padding: 16px 0;
         border-top: 1px solid $colorGrayDark;
+        padding-right: 20px;
     }
 
     &__link {
         color: $colorBlue;
         text-transform: lowercase;
-        font-size: 22px;
-        line-height: 35px;
+        font-size: 21px;
+        line-height: 30px;
     }
 
     &__btn {
@@ -115,10 +143,6 @@ body {
 
     &__wrap-text {
         margin-top: 25px;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
     }
 }
 
