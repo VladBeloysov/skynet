@@ -18,6 +18,7 @@ module.exports = {
 
       {
         test: /\.pug$/,
+        loader: "pug?pretty=true",
         use: [
           "html-loader",
           "pug-html-loader"

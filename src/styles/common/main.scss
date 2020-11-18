@@ -12,13 +12,15 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-items: stretch;
         margin: 0 auto;
     }
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     background-color: $colorWhite;
     border-top: 1px solid $colorGrayDark;
@@ -26,12 +28,22 @@ body {
     margin-bottom: 40px;
     padding-left: 30px;
 
-    @media (min-width: 640px) {
-        width: calc(50% - 50px);
+
+    @media (min-width: 640px) and (max-width: 1023px) {
+        width: calc(50% - 45px);
+        margin-right: 30px;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
     }
 
     @media (min-width: 1024px) {
         width: calc(33.33% - 50px);
+        margin-right: 30px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
     }
 
     &--main {
@@ -78,6 +90,7 @@ body {
     }
 
     &__content {
+        height: 100%;
         color: $colorTetxt;
         padding-bottom: 15px;
         display: block;
@@ -118,7 +131,7 @@ body {
     &__footer {
         padding: 16px 0;
         border-top: 1px solid $colorGrayDark;
-        padding-right: 20px;
+        padding-right: 30px;
     }
 
     &__link {
@@ -130,7 +143,7 @@ body {
 
     &__btn {
         display: block;
-        width: calc(100% - 30px);
+        width: 100%;
         height: 80px;
         line-height: 80px;
         background-color: $colorGreen;
